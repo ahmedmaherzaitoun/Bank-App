@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 import com.example.myapplication.adaptor.UserRecyclerViewAdapter
 import com.example.myapplication.database.SQLiteHelper
 

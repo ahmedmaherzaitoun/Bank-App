@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.myapplication.R
 import com.example.myapplication.database.SQLiteHelper
 import com.example.myapplication.model.UserModel
 import java.text.SimpleDateFormat

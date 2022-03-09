@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".TransactionsActivity"
+            android:name=".view.TransactionsActivity"
             android:label="All Transactions"
-            android:parentActivityName=".UsersActivity"
+            android:parentActivityName=".view.UsersActivity"
             android:exported="false" />
         <activity
-            android:name=".UserTransactionActivity"
+            android:name=".view.UserTransactionActivity"
             android:exported="false"
             android:label="Transaction"
-            android:parentActivityName=".UsersActivity" />
+            android:parentActivityName=".view.UsersActivity" />
         <activity
-            android:name=".UsersActivity"
+            android:name=".view.UsersActivity"
             android:exported="false"
             android:label="Users"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".view.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true"
             android:label="Bank">
             <intent-filter>
