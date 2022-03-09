@@ -23,12 +23,12 @@
     <TextView
         android:id="@+id/username_transaction"
         android:layout_width="250dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="72dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="74dp"
         android:layout_marginTop="44dp"
         android:text="TextView"
         android:textColor="#3F51B5"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,12 +49,12 @@
     <TextView
         android:id="@+id/user_email_transaction"
         android:layout_width="250dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         android:textColor="#3F51B5"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/username_transaction" />
@@ -74,22 +74,22 @@
 
     <TextView
         android:id="@+id/user_balance_transacion"
-        android:layout_width="249dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="250dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="15dp"
         android:text="TextView"
         android:textColor="#3F51B5"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/user_email_transaction" />
+        app:layout_constraintTop_toBottomOf="@+id/iban_code" />
 
     <EditText
         android:id="@+id/et_numer_transaction"
         android:layout_width="190dp"
         android:layout_height="49dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:ems="10"
         android:inputType="number"
@@ -127,8 +127,8 @@
         android:id="@+id/spinner"
         android:layout_width="226dp"
         android:layout_height="48dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/et_numer_transaction" />
 
@@ -149,8 +149,8 @@
         android:id="@+id/btn_send"
         android:layout_width="250dp"
         android:layout_height="75dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="76dp"
         android:text="Transfer money"
         app:cornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,8 +158,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="80dp"
-        android:layout_height="19dp"
+        android:layout_width="111dp"
+        android:layout_height="22dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="IBAN Code:"
@@ -173,10 +173,11 @@
         android:id="@+id/iban_code"
         android:layout_width="250dp"
         android:layout_height="23dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:textColor="#3F51B5"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/user_email_transaction" />
