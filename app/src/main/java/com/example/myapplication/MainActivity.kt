@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
-
+import com.example.myapplication.adaptor.UserRecyclerViewAdapter
+import com.example.myapplication.database.SQLiteHelper
 
 
 class MainActivity : AppCompatActivity() {

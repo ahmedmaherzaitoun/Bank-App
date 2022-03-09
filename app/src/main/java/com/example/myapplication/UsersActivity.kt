@@ -1,12 +1,12 @@
 
 package com.example.myapplication
 
-import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.adaptor.UserRecyclerViewAdapter
+import com.example.myapplication.database.SQLiteHelper
 
 
 class UsersActivity : AppCompatActivity() {

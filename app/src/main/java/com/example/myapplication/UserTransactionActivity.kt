@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import com.example.myapplication.database.SQLiteHelper
+import com.example.myapplication.model.UserModel
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -23,7 +25,7 @@ class UserTransactionActivity : AppCompatActivity() {
     private lateinit var spinner:Spinner
     private lateinit var recieverEmail: String
     private var currentBalanceOfReceiver : Int = 0
-   private lateinit var reciver:UserModel
+   private lateinit var reciver: UserModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

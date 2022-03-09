@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.model
 
 data class TransactionModel (
     val transaction_id:Int = getAutoId() ,

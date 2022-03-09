@@ -1,13 +1,18 @@
-package com.example.myapplication
+package com.example.myapplication.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.myapplication.model.TransactionModel
+import com.example.myapplication.model.UserModel
 import java.lang.Exception
 
-class SQLiteHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME ,null,DATABASE_VERSION) {
+class SQLiteHelper(context: Context):SQLiteOpenHelper(context,
+    DATABASE_NAME ,null,
+    DATABASE_VERSION
+) {
     companion object{
         private const val DATABASE_NAME = "bank.db"
         private const val DATABASE_VERSION = 1
@@ -94,7 +99,6 @@ class SQLiteHelper(context: Context):SQLiteOpenHelper(context,DATABASE_NAME ,nul
         contentValues.put(AMOUNT, "$amount$")
         contentValues.put(DATE,date)
         contentValues.put(STATUS,status)
-
         val success = db.insert(TB_TRANSACTION , null , contentValues)
         db.close()
         return success

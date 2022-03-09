@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.adaptor.TransactionAdapter
+import com.example.myapplication.database.SQLiteHelper
 
 class TransactionsActivity : AppCompatActivity() {
     private lateinit var sqLiteHelper: SQLiteHelper

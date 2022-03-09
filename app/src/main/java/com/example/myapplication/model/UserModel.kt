@@ -1,7 +1,4 @@
-package com.example.myapplication
-
-import java.util.*
-import kotlin.random.Random
+package com.example.myapplication.model
 
 
 data class UserModel(

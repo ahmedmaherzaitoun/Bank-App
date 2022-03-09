@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.adaptor
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.UserTransactionActivity
+import com.example.myapplication.model.UserModel
 
 class UserRecyclerViewAdapter : RecyclerView.Adapter<UserRecyclerViewAdapter.UserViewHolder>() {
     private var userList:ArrayList<UserModel> = ArrayList()
@@ -36,12 +38,12 @@ class UserRecyclerViewAdapter : RecyclerView.Adapter<UserRecyclerViewAdapter.Use
         private var email = view.findViewById<TextView>(R.id.email)
         private var currentBalance = view.findViewById<TextView>(R.id.balance)
 
-        fun bindView(user :UserModel){
+        fun bindView(user : UserModel){
             name.text = user.name
             email.text = user.email
             currentBalance.text = user.currentBalance.toString() +"$"
             btnTransaction.setOnClickListener{
-                val intent = Intent(view.context,UserTransactionActivity::class.java)
+                val intent = Intent(view.context, UserTransactionActivity::class.java)
                 intent.putExtra("userId" ,user.id.toString() )
                 intent.putExtra("userEmail" ,user.email)
                 intent.putExtra("userName" ,user.name)

@@ -1,12 +1,13 @@
-package com.example.myapplication
+package com.example.myapplication.adaptor
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.model.TransactionModel
 
 class TransactionAdapter :RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
     private var transactionList:ArrayList<TransactionModel> = ArrayList()
@@ -16,7 +17,7 @@ class TransactionAdapter :RecyclerView.Adapter<TransactionAdapter.TransactionVie
     )
 
 
-    override fun onBindViewHolder(holder: TransactionAdapter.TransactionViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         val transaction = transactionList[position]
         holder.bindView(transaction)
     }
@@ -45,6 +46,7 @@ class TransactionAdapter :RecyclerView.Adapter<TransactionAdapter.TransactionVie
             status.text = transaction.status
             if( transaction.status =="Success"){
                 status.setTextColor(Color.parseColor("#4CAF50"))
+
             }else{
                 status.setTextColor(Color.parseColor("#FF5722"))
             }
