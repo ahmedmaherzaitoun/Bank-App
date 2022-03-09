@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Bank App</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="transfer_money">Transfer Money</string>
 </resources>

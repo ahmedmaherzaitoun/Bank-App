@@ -17,6 +17,7 @@ class UserTransactionActivity : AppCompatActivity() {
     private lateinit var tvEmail: TextView
     private lateinit var tvCurrentBalance :TextView
     private lateinit var tvIban :TextView
+    private lateinit var userCurrentBalance :String
 
     private lateinit var transferValue: EditText
     private lateinit var spinner:Spinner
@@ -52,8 +53,7 @@ class UserTransactionActivity : AppCompatActivity() {
         tvEmail.text = email
         tvIban.text = ibanCode
 
-        tvCurrentBalance.text = currentBalance
-
+        tvCurrentBalance.text = "$currentBalance $"
         val listUsers:ArrayList<UserModel> = sqLiteHelper.getAllUsers()
         var listSpinner  :ArrayList<String> = ArrayList()
         var listPositions  :ArrayList<Int> = ArrayList()
@@ -92,7 +92,7 @@ class UserTransactionActivity : AppCompatActivity() {
             var flagSuccess = true
 
             if (transferValue.text.isNotEmpty()) {
-                    if (transferValue.text.toString().toInt() > tvCurrentBalance.text.toString().toInt()) {
+                    if (transferValue.text.toString().toInt() > currentBalance.toString().toInt()) {
                         Toast.makeText(
                             this@UserTransactionActivity,
                             "Current Balance don't enough",
@@ -102,7 +102,7 @@ class UserTransactionActivity : AppCompatActivity() {
                     } else {
 
                         val valueOfSender: Int =
-                            tvCurrentBalance.text.toString().toInt() - transferValue.text.toString()
+                            currentBalance.toString().toInt() - transferValue.text.toString()
                                 .toInt()
                         val valueOfReceiver: Int =
                             transferValue.text.toString().toInt() + currentBalanceOfReceiver
@@ -131,7 +131,7 @@ class UserTransactionActivity : AppCompatActivity() {
                             ).show()
                         }
                         // Toast.makeText(this@UserTransactionActivity, "transaction Successfully current balance is $valueOfSender", Toast.LENGTH_SHORT).show()
-                        tvCurrentBalance.text = valueOfSender.toString()
+                        tvCurrentBalance.text = valueOfSender.toString() + " $"
                     }
 
             }else{
